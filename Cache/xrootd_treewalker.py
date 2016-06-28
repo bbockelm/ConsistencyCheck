@@ -56,6 +56,7 @@ if __name__ == '__main__':
 
     base_url = 'root://xrootd.cmsaf.mit.edu//'
     dirs = [ '/store/test/xrootd/T2_US_MIT/store/mc/JobRobot/' ] # just testing
+#    dirs = [ '/store/mc/RunIISummer15GS/DYJetsToLL_M-50_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/' ]  # This will dump much more, if it works
 
     for dir in dirs:
 
