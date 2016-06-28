@@ -53,20 +53,12 @@ def process_dir(base_url, directory):
 # LAST CHARACTER IN THE DIR HAS TO BE A   '/'
 
 if __name__ == '__main__':
-    from argparse import ArgumentParser
-    parser = ArgumentParser()
 
-    parser.add_argument('--sitename', '-s', metavar='SiteName', dest='sitename', default=os.environ.get('site'),
-                        help='Name of site to run treewalker on.')
-    parser.add_argument('--baseurl', '-b', metavar='BaseURL', dest='baseurl', default=os.environ.get('SE_' + os.environ.get('site')),
-                        help='Base URL to check with xrootd.')
+    base_url = 'root://xrootd.cmsaf.mit.edu//'
+    dirs = [ '/store/test/xrootd/T2_US_MIT/store/mc/JobRobot/' ] # just testing
 
-base_url = 'root://srm.unl.edu//'
-dirs = [ '/store/test/xrootd/T2_US_Nebraska/store/data/Run2015E/JetHT/' ] # just testing
-# [ '/store/test/xrootd/T2_US_Nebraska/store/data/', '/store/test/xrootd/T2_US_Nebraska/store/mc/' ]
+    for dir in dirs:
 
-for dir in dirs:
-
-    filelist = process_dir(base_url,dir)
-    print '\n =-=-=-= Listing: ' + dir
-    print filelist
+        filelist = process_dir(base_url,dir)
+        print '\n =-=-=-= Listing: ' + dir
+        print filelist
