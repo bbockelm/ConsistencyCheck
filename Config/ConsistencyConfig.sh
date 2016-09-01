@@ -1,5 +1,4 @@
 ## Location of all the files saved and read by the ConsistencyCheck
-export ConsistencyCacheDirectory=~/ConsistencyCache
 
 if [ ! -d $ConsistencyCacheDirectory ]
 then
@@ -19,7 +18,7 @@ export NumPhedexThreads=2
 export PhedexOutputAge=30240
 
 ## Location of webpages
-export ConsistencyWebpages=~/www/ConsistencyCheck
+export ConsistencyWebpages=~/public_html/ConsistencyCheck
 
 ## List of SEs
 
