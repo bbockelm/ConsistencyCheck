@@ -57,7 +57,14 @@ class TestT3Listing(unittest.TestCase):
 
 if __name__ == '__main__':
 
-    if len(sys.argv) == 2:
+    if 'loop' in sys.argv:
+        logging.basicConfig(level=logging.INFO,
+                            format='%(asctime)s:%(levelname)s:%(name)s: %(message)s')
+
+        while True:
+            getsitecontents.get_site_tree('T3_US_MIT')
+
+    elif len(sys.argv) == 2:
         start = time.time()
 
         logging.basicConfig(level=logging.DEBUG)

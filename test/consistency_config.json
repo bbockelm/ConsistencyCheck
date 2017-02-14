@@ -15,7 +15,11 @@
     "generator",
     "results",
     "hidata",
-    "himc"
+    "himc",
+    "PhEDEx_LoadTest07",
+    "test",
+    "unmerged",
+    "user"
   ],
   "WebPageLocation": "www",
   "SiteList": [

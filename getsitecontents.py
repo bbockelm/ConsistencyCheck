@@ -36,11 +36,11 @@ def get_site_tree(site):
     # The redir_list is used for the original listing
 
     _, redir_list = config.get_redirector(site)
-    LOG.debug('Full redirector list: %s', redir_list)
+    LOG.info('Full redirector list: %s', redir_list)
 
     # Get the primary list of servers to hammer
     primary_list = random.sample(redir_list, (len(redir_list) + 1)/2)
-    LOG.debug('Primary redirector list: %s', primary_list)
+    LOG.info('Primary redirector list: %s', primary_list)
 
     # Create the filler function for the DirectoryInfo
 
